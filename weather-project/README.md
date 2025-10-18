@@ -45,7 +45,7 @@ cd Docker-labs/weather-project
 
 ### 2️⃣ Get your OpenWeatherMap API key
 
-1. Go to OpenWeatherMap API Keys
+1. Go to OpenWeatherMap API Keys (https://home.openweathermap.org/users/sign_in)
 2. Sign up or log in
 3. Copy your API key
 4. Open the file `weather-backend/.env` and replace the existing key with yours:
