@@ -152,15 +152,4 @@ You can get your API key here:\
 | Containerization | Docker, Docker Compose |
 | API | OpenWeatherMap |
 
-## 🧾 License
 
-This project is open-source and available under the MIT License.
-
-## ❤️ Contributing
-
-If you’d like to contribute:
-
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit changes and push
-4. Submit a pull request 🚀
