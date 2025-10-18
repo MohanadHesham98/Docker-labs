@@ -373,16 +373,3 @@ You should see the Medical Appointment Dashboard 💊
 | Database | MySQL |
 | Reverse Proxy | NGINX |
 | Containerization | Docker, Docker Compose |
-
-## ❤️ Contributing
-
-1. Fork the repo
-2. Create a new branch
-3. Commit your changes
-4. Push and open a Pull Request
-
-## 📜 License
-
-This project is open-source and available under the MIT License.
-
-✅ Now your project is fully ready for GitHub — just copy-paste this into your `README.md` file. It explains everything, even for someone who’s never touched Docker or NGINX before.
