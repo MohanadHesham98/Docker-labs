@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  backend:
+    build: ./weather-backend
+    container_name: weather-backend
+    env_file:
+      - ./weather-backend/.env
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build: ./weather-frontend
+    container_name: weather-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
