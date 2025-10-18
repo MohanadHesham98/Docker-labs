@@ -60,7 +60,7 @@ PORT=5000
 ### 3️⃣ Run the entire project using Docker Compose
 
 ```bash
-docker-compose up --build
+docker-compose up --build -d
 ```
 
 This command will:
