@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mobiles - Simple Market</title><link rel="stylesheet" href="styles.css"></head>
+<body><header><h1>Mobiles</h1><nav><a href="index.html">Home</a><a href="cart.html">Cart</a></nav></header>
+<main id="products" class="products-grid"></main>
+<footer>&copy; 2025 Simple Market</footer>
+<script src="script.js"></script>
+<script>
+fetch('/api/mobiles').then(res=>res.json()).then(data=>{const container=document.getElementById('products');data.forEach(item=>{const div=document.createElement('div');div.className='product-card';div.innerHTML=`<h3>${item.name}</h3><p>$${item.price}</p><button onclick='addToCart(${JSON.stringify(item)})'>Add to Cart</button>`;container.appendChild(div);});});
+</script></body></html>

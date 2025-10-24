@@ -1,0 +1,8 @@
+{
+  "name": "simple-market-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Simple Market",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^4.18.2" }
+}

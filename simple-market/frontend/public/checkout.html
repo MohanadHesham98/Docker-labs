@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Checkout - Simple Market</title><link rel="stylesheet" href="styles.css"></head>
+<body><header><h1>Checkout</h1><nav><a href="index.html">Home</a><a href="cart.html">Cart</a></nav></header>
+<main class="checkout-form">
+<form>
+<label for="name">Full Name</label><input type="text" id="name" required>
+<label for="email">Email</label><input type="email" id="email" required>
+<label for="address">Address</label><textarea id="address" required></textarea>
+<label for="payment">Payment Method</label><select id="payment" required><option value="card">Credit Card</option><option value="paypal">PayPal</option></select>
+<button type="submit">Place Order</button>
+</form></main>
+<footer>&copy; 2025 Simple Market</footer>
+<style>
+.checkout-form { max-width:500px; margin:2rem auto; padding:1rem; background:white; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+.checkout-form label { display:block; margin-top:1rem; font-weight:bold; }
+.checkout-form input, .checkout-form textarea, .checkout-form select { width:100%; padding:0.5rem; margin-top:0.5rem; border-radius:5px; border:1px solid #ccc; }
+.checkout-form button { margin-top:1rem; padding:0.5rem 1rem; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer;}
+.checkout-form button:hover { background:#0056b3; }
+</style>
+</body></html>
