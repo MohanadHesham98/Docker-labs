@@ -36,19 +36,21 @@ NGINX receives all client requests and forwards them to backend containers using
 ## 🧰 Project Structure
 
 ```
-lB-lab/
-│
-├── backend/
-│   ├── Dockerfile
-│   ├── app.js (or main.py)
-│   └── ...
-│
-├── nginx/
-│   ├── nginx.conf
-│   └── Dockerfile
-│
-├── docker-compose.yml
-└── README.md
+VM1/
+├── lB-lab/
+├── Dockerfile
+├── index.html
+├── second.html
+├── nginx-lb/
+|    └── nginx.conf   # only on VM1
+└── docker-compose.ymal
+
+VM2/
+├── lB-lab/
+├── Dockerfile
+├── index.html
+├── second.html
+└── docker-compose.ymal
 ```
 
 ---
@@ -63,7 +65,7 @@ lB-lab/
 
 2. **Build and run containers**
    ```bash
-   docker-compose up --build
+   docker-compose up --build -d
    ```
 
 3. **Test the load balancing**
@@ -86,9 +88,11 @@ lB-lab/
 ## 📸 Example Output
 
 ```
-Response from Backend 1
-Response from Backend 2
-Response from Backend 3
+<img width="1445" height="341" alt="image" src="https://github.com/user-attachments/assets/f795c855-6b5f-41bc-bb59-b0736ca9b672" />
+<img width="1423" height="461" alt="image" src="https://github.com/user-attachments/assets/70f6b1ef-067e-4987-b31a-a5b5a1bb9f3f" />
+<img width="1464" height="361" alt="image" src="https://github.com/user-attachments/assets/e6a4c17b-fc57-4b69-bdf8-77cb024c8151" />
+<img width="1452" height="411" alt="image" src="https://github.com/user-attachments/assets/6a283f84-33b9-443b-956c-99c7cb4d6851" />
+
 ```
 
 Each refresh or request cycles through the available backends.
@@ -112,9 +116,3 @@ docker-compose down
 ✅ Build scalable multi-container apps
 
 ---
-
-## 🧑‍💻 Author
-
-**Mohanad Hesham El-Sayed Mahmoud**  
-Electronics and Communications Engineer | DevOps & Cloud Enthusiast  
-📧 [mohanad.hesham@example.com](mailto:mohanad.hesham@example.com)
