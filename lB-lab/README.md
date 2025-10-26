@@ -18,8 +18,8 @@ The lab contains:
 
 ```
 Client --> NGINX Load Balancer --> Backend_1
-                                 --> Backend_2
-                                 --> Backend_3
+                               --> Backend_2
+                                 
 ```
 
 NGINX receives all client requests and forwards them to backend containers using a **round-robin** load balancing method by default.
