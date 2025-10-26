@@ -19,7 +19,6 @@ The lab contains:
 ```
 Client --> NGINX Load Balancer --> Backend_1
                                --> Backend_2
-                                 
 ```
 
 NGINX receives all client requests and forwards them to backend containers using a **round-robin** load balancing method by default.
@@ -43,14 +42,14 @@ VM1/
 ├── second.html
 ├── nginx-lb/
 |    └── nginx.conf   # only on VM1
-└── docker-compose.ymal
+└── docker-compose.yml
 
 VM2/
 ├── lB-lab/
 ├── Dockerfile
 ├── index.html
 ├── second.html
-└── docker-compose.ymal
+└── docker-compose.yml
 ```
 
 ---
@@ -87,13 +86,10 @@ VM2/
 
 ## 📸 Example Output
 
-```
 <img width="1445" height="341" alt="image" src="https://github.com/user-attachments/assets/f795c855-6b5f-41bc-bb59-b0736ca9b672" />
 <img width="1423" height="461" alt="image" src="https://github.com/user-attachments/assets/70f6b1ef-067e-4987-b31a-a5b5a1bb9f3f" />
 <img width="1464" height="361" alt="image" src="https://github.com/user-attachments/assets/e6a4c17b-fc57-4b69-bdf8-77cb024c8151" />
 <img width="1452" height="411" alt="image" src="https://github.com/user-attachments/assets/6a283f84-33b9-443b-956c-99c7cb4d6851" />
-
-```
 
 Each refresh or request cycles through the available backends.
 
@@ -103,7 +99,7 @@ Each refresh or request cycles through the available backends.
 
 To stop all containers:
 ```bash
-docker-compose down
+docker-compose down -v
 ```
 
 ---
@@ -114,5 +110,3 @@ docker-compose down
 ✅ Learn Docker Compose networking  
 ✅ Practice container orchestration  
 ✅ Build scalable multi-container apps
-
----
