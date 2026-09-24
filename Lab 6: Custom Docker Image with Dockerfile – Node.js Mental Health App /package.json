@@ -1,0 +1,19 @@
+{
+  "name": "mental-health-app",
+  "version": "1.0.0",
+  "description": "A simple mental health awareness web application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "mental-health",
+    "wellness",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
