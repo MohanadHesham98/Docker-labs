@@ -14,7 +14,10 @@ const JWT_SECRET = process.env.JWT_SECRET || crypto.randomBytes(32).toString('he
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname)));
+
+// Serve static frontend assets from the public directory
+const PUBLIC_DIR = path.join(__dirname, '../public');
+app.use(express.static(PUBLIC_DIR));
 
 // --- In-memory data store (seeded on startup) ---
 let doctors = [];
@@ -246,14 +249,14 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', doctors: doctors.length, bookings: bookings.length, users: users.length });
 });
 
-// SPA fallback - serve index.html for non-API, non-file routes
+// SPA fallback - serve files from public/ for non-API routes
 app.get('*', (req, res, next) => {
   if (req.path.startsWith('/api/')) return next();
-  const filePath = path.join(__dirname, req.path);
+  const filePath = path.join(PUBLIC_DIR, req.path);
   if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
     return res.sendFile(filePath);
   }
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(PUBLIC_DIR, 'index.html'));
 });
 
 app.listen(PORT, () => {
